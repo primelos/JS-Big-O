@@ -15,8 +15,8 @@
 let maxProduct = function(nums) {
     let maxTillIndex = [nums[0]]
     let minTillIndex = [nums[0]]
-    console.log(maxTillIndex)
-    console.log(minTillIndex)
+    console.log('maxtill',maxTillIndex)
+    console.log('mintill',minTillIndex)
     let max = nums[0]
     console.log('max',max)
 
@@ -33,3 +33,4 @@ let maxProduct = function(nums) {
 };
 
 console.log(maxProduct([2,3,-2,4]))
+//                      0 1  2 3
