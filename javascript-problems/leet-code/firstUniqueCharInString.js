@@ -25,5 +25,11 @@ var firstUniqChar = function(s) {
             hash[letter] = 0
         }
     }
+    for(let letter in hash){
+        if (hash[letter] === 0){
+            return s.indexOf(letter)
+        }
+    }
+    return -1
 
 }
