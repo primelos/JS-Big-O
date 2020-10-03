@@ -14,3 +14,19 @@
 
 // Output: 1 2 4 5 7 8 15 32 65 78 87 91
 
+function processData(input) {
+    
+    let newStr = input.split(' ').join()
+    let newArr = newStr.replace(/\n/g, ',').split(',')
+    let removeSpace = newArr.filter(function(ent) { return ent.trim() != ' '})
+    let code = []
+    console.log(removeSpace)
+    for(let i = 2 ; i < removeSpace.length; i++){
+        if (removeSpace[i] !== ''){
+            code.push(Number(removeSpace[i]))
+        } 
+    }
+    code.sort((a,b) => a-b)
+    console.log(code)
+    return code
+} 
