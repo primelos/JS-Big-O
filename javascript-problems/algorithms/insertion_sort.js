@@ -35,4 +35,29 @@ function insertion_sort(arr){
 
 }
 
+OR
+function insertionSort(array){
+    for(let i = 1; i < array.length; i++){
+        for(let j = 1; i > 0; i--) {
+            if(array[j + 1] < array[j]){
+                [array[j], array[j+1]] = [array[j+1], array[j]]
+            } else {
+                break
+            }
+        }
+    }
+    return array
+}
 // console.log(insertion_sort([3,1,5,76,2,38,18,7]))
+
+
+// WITH 3 PARAMETERS TO HELP SORT
+// var insert = function (array, rightIndex, value) {
+//   var i;
+//   for (i = rightIndex; i >= 0 && array[i] > value; i--) {
+//     array[i + 1] = array[i];
+//   }
+//   array[i + 1] = value;
+// };
+
+// var array = [3, 5, 7, 11, 13, 2, 9, 6];
