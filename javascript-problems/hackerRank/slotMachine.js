@@ -1,3 +1,4 @@
+// TWITTER CHALLENGE
 // 1 3 7
 // 3 6 4
 // 1 1 5
@@ -33,3 +34,5 @@ function slotWheels(history) {
     // console.log('totalStops',totalStops)
     return totalStops
 }
+
+console.log(slotWheels(['3 6 4','1 1 5','7 2 4']))
