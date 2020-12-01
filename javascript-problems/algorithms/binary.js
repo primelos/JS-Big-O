@@ -4,16 +4,12 @@
 
 function binary_search(arr, num){
     let left = 0
-    console.log('left',left)
     let right = arr.length -1
-    console.log('right', right)
 
     let middle = Math.floor((right + left) / 2)
-    console.log('middle', middle)
 
-    console.log(typeof(Math.round(middle)))
     target = 0
-    while(arr[middle] !== num && left <= right){
+    while(arr[middle] !== num && left < right){
         if ( num < arr[middle]){
             right = middle-1
         } else {
@@ -26,6 +22,7 @@ function binary_search(arr, num){
    
 }
 let a = [2,4,5,6,7,8,9,11,12,13,14,16]
-//       0 1 2 3 4 5 6  7  8  9  10 11
-let item = 4
+//index  0 1 2 3 4 5 6  7  8  9  10 11
+
+let item = 13
 console.log(binary_search(a, item))
