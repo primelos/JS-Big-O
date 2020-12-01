@@ -5,7 +5,7 @@
 // You may assume the integer does not contain any leading zero, except the number 0 itself.
 
 let plusOne = function (digits){
-    for (let i = digits.length -1; i >= 0; i --){
+    for (let i = digits.length -1; i >= 0; i--){
         if (digits[i] < 9) {
             digits[i] = digits[i] + 1
             return digits
