@@ -1,12 +1,18 @@
 function multiples(a, b){
     let arr = []
-    for(let i in 1000){
-        console.log(i)
+    console.log('hi');
+    for(let i = 0; i < 1000; i++){
+        // console.log(i)
+        // console.log('bye');
         if (i % a === 0 || i % b === 0){
             arr.push(i)
         }
     }
-    return arr
+    let test = arr.reduce((a,b) => {
+        return a+b
+    })
+    console.log(test);
+    return test
 }
 
 

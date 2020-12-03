@@ -30,3 +30,6 @@ function processData(input) {
     console.log(code)
     return code
 } 
+
+
+console.log(processData('3 4 5 8 4 7 15 32 87 65 2 1 78 91'))
