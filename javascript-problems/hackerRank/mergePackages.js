@@ -15,11 +15,15 @@
 function mergePackage(items, limit){
     let hash = {} 
     let index = 0 
-    console.log((hash));
+
     while(index < items.length){
-        if (!(limit - items[index]) in hash){
-            hash[items[index]] = index
-            index++
+        if(hash.hasOwnProperty(limit - items[index])) {
+            return [index, hash[limit - items[index]]]  // return index of values
+            // return [items[index], items[hash[limit - items[index]]]] // return item values
+        } else {
+            hash[items[index]] = index;
+            console.log(hash);
+            index++;
         }
     }
     console.log(hash);
@@ -28,4 +32,6 @@ function mergePackage(items, limit){
 }
 
 
-console.log(mergePackage([4,6,10,15,16], 21))
+console.log(mergePackage([4, 6, 10, 15, 16], 21))
+//                        0, 1,  2,  3,  4 
+// 17, 15, 11, 6, 5
