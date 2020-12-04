@@ -12,8 +12,7 @@ function averagePair(arr, average){
             return true
         } else if(avg < average){
             start++
-        } 
-        else {
+        } else {
            end-- 
         } 
     }
