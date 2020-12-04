@@ -34,8 +34,9 @@ function insertion_sort(arr){
     return arr
 
 }
+console.log(insertion_sort([3, 1, 5, 76, 2, 38, 18, 9]));
 
-OR
+// OR
 function insertionSort(array){
     for(let i = 1; i < array.length; i++){
         for(let j = 1; i > 0; i--) {
