@@ -1,3 +1,8 @@
+// Given an array of integers and a number, write a function called maxSubarray
+// which finds the maximum sum of a subarray with the length of the number passed to the 
+// function 
+// subarray must consist of consecutive elements from the original array.
+
 function maxSubarray(arr, len){
     if(arr.length < len) return null
     
