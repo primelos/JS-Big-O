@@ -18,3 +18,4 @@ function lottery() {
 }
 
 console.log(lottery());
+12345

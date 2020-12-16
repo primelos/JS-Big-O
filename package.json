@@ -1,0 +1,23 @@
+{
+  "name": "JS-Big-O",
+  "version": "1.0.0",
+  "description": "Big O OBJECT METHODS Object.keys    = O(n) Object.values  = O(n) Object.entries = O(n) hasOwnProperty = O(n)",
+  "main": "addUpTo.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/primelos/JS-Big-O.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/primelos/JS-Big-O/issues"
+  },
+  "homepage": "https://github.com/primelos/JS-Big-O#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
