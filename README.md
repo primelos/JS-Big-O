@@ -1,23 +1,5 @@
-# JS-Big-O
-Big O
-OBJECT METHODS
-Object.keys    = O(n)
-Object.values  = O(n)
-Object.entries = O(n)
-hasOwnProperty = O(n)
+### JS-Big-O
+# *BREAKING THE CODE*
 
-ARRAYS
-are ordered data structures
-insertion = depends O(n)
-removal   = depends O(n)
-searching = O(n)
-access    = O(1)
-push      = O(1)
-pop       = O(1)
-shift     = O(n)
-unshift   = O(n)
-concat    = O(n)
-slice     = O(n)
-splice    = O(n)
-sort      = O(n logn)
-forEach/map/filter/reducer = O(n)
+I Decide to it would be a good idea to keep solutions to problems I've worked on saved in one place for quick & easy reference!
+
