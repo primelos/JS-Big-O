@@ -15,10 +15,10 @@
 //     return arr
 // }
 //                          0 1 2  3 4 5  6  7 
-console.log(insertion_sort([3,1,5,76,2,38,18,9]))
+// console.log(insertionSort([3,1,5,76,2,38,18,9]))
 //                          j i
 
-function insertion_sort(arr){
+function insertionSort(arr){
     for(let i = 1; i < arr.length; i++){
         let current = arr[i]
         console.log('current',current)
@@ -34,22 +34,22 @@ function insertion_sort(arr){
     return arr
 
 }
-console.log(insertion_sort([3, 1, 5, 76, 2, 38, 18, 9]));
+// console.log(insertionSort([3, 1, 5, 76, 2, 38, 18, 9]));
 
 // OR
-function insertionSort(array){
-    for(let i = 1; i < array.length; i++){
-        for(let j = 1; i > 0; i--) {
-            if(array[j + 1] < array[j]){
-                [array[j], array[j+1]] = [array[j+1], array[j]]
-            } else {
-                break
-            }
-        }
-    }
-    return array
-}
-// console.log(insertion_sort([3,1,5,76,2,38,18,7]))
+// function insertionSort(array){
+//     for(let i = 1; i < array.length; i++){
+//         for(let j = 1; i > 0; i--) {
+//             if(array[j + 1] < array[j]){
+//                 [array[j], array[j+1]] = [array[j+1], array[j]]
+//             } else {
+//                 break
+//             }
+//         }
+//     }
+//     return array
+// }
+console.log(insertionSort([3,1,5,76,2,38,18,7]))
 
 
 // WITH 3 PARAMETERS TO HELP SORT
@@ -62,3 +62,6 @@ function insertionSort(array){
 // };
 
 // var array = [3, 5, 7, 11, 13, 2, 9, 6];
+
+
+module.exports = insertionSort;
