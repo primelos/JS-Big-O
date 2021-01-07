@@ -14,8 +14,9 @@ function lottery() {
       megaNumber.push(mega);
     }
   }
+  
   return { lotteryNums, megaNumber };
 }
 
 console.log(lottery());
-12345
+// 12345
