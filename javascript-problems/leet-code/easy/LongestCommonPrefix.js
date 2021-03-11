@@ -71,3 +71,20 @@ var longestCommonPrefix = function (strs) {
 };
 
 console.log(longestCommonPrefix(["flower", "flow", "flight"]));
+
+
+// var longestCommonPrefix = function (strs) {
+//   if (!strs.length) {
+//     return "";
+//   }
+//   for (let i = 0; i < strs[0].length; i++) {
+//     for (let s of strs) {
+//       // console.log(s)
+//       console.log(s[i], strs[0][i]);
+//       if (s[i] !== strs[0][i]) {
+//         return s.slice(0, i);
+//       }
+//     }
+//   }
+//   return strs[0];
+// };
