@@ -21,27 +21,30 @@
 // YES
 
 function isBalanced(s) {
-    // NO STACK
-    // let n = -1;
-    // console.log('s', s.length)
-    // while (s.length != n) {
-    //     n = s.length;
-    //     s = s.replace('[]', '');
-    //     console.log('s1',s)
-    //     s = s.replace('()', '');
-    //     console.log('s2',s)
-    //     s = s.replace('{}', '');
-    //     console.log('s3',s)
-    // }
-    // if (s.length == 0)
-    //     return "YES"
-    // else 
-    //     return "NO"
+//     // MUTATES the array
+//     // NO STACK
+//     let n = -1;
+//     console.log('s', s.length)
+//     while (s.length != n) {
+//         n = s.length;
+//         s = s.replace('[]', '');
+//         console.log('s1',s)
+//         s = s.replace('()', '');
+//         console.log('s2',s)
+//         s = s.replace('{}', '');
+//         console.log('s3',s, s.length)
+//     }
+//     if (s.length == 0)
+//         return "YES"
+//     else 
+//         return "NO"
 
-    // STACK
+    // STACK AND MAP
     let stack = []
     let closed = new Map([ [')','('], [']','['], ['}','{'] ])
+    console.log(closed);
     for(let bracket of s){
+        console.log(closed.has(bracket));
         if (closed.has(bracket)){
             if (closed.get(bracket) !== stack[stack.length -1]){
                 return 'NO'
@@ -58,4 +61,38 @@ function isBalanced(s) {
     return 'YES'
     
 }
+
 console.log(isBalanced('({()})[]{}'))
+
+
+// USING STACK AND SET
+// function isValid(code) {
+//   // Determine if the input code is valid
+
+//   const openersToClosers = {
+//     "(": ")",
+//     "[": "]",
+//     "{": "}",
+//   };
+//   // ([]{[]})[]{{}()}
+//   const openers = new Set(["(", "[", "{"]);
+//   const closers = new Set([")", "]", "}"]);
+//   const openerStack = [];
+//   let i;
+//   for (i = 0; i < code.length; i++) {
+//     const char = code[i];
+
+//     if (openers.has(char)) {
+//       openerStack.push(char);
+//     } else if (closers.has(char)) {
+//       if (!openerStack.length) {
+//         return false;
+//       }
+//       const lastOpener = openerStack.pop();
+//       if (openersToClosers[lastOpener] !== char) {
+//         return false;
+//       }
+//     }
+//   }
+//   return openerStack.length === 0;
+// }
