@@ -25,7 +25,7 @@ function getMaxProfit(stockPrices) {
     console.log(potentialProfit)
 
     maxProfit = Math.max(maxProfit, potentialProfit);
-    
+    console.log(maxProfit);
     minPrice = Math.min(minPrice, currentPrice);
     console.log(minPrice);
     
@@ -35,5 +35,8 @@ function getMaxProfit(stockPrices) {
 
 
 
-// console.log(getMaxProfit([10, 7, 5, 8, 11, 9]));
-console.log(getMaxProfit([10, 7, 5, 3, 2, 1]));
+console.log(getMaxProfit([19, 9, 5, 8, 11, 9]));
+
+
+
+// console.log(getMaxProfit([10, 7, 5, 3, 2, 1]));
