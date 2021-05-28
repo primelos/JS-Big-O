@@ -2,8 +2,6 @@
 
 // The overall run time complexity should be O(log (m+n)).
 
- 
-
 // Example 1:
 
 // Input: nums1 = [1,3], nums2 = [2]
@@ -26,7 +24,6 @@
 
 // Input: nums1 = [2], nums2 = []
 // Output: 2.00000
- 
 
 // Constraints:
 
@@ -42,4 +39,16 @@
  * @param {number[]} nums2
  * @return {number}
  */
-var findMedianSortedArrays = function (nums1, nums2) {};
+var findMedianSortedArrays = function (nums1, nums2) {
+  let combineNum = [...nums1, ...nums2].sort((a, b) => a - b);
+  console.log(combineNum);
+  if (combineNum.length === 1) return combineNum[0];
+
+  if (combineNum.length % 2 === 1) {
+    return combineNum[Math.floor(combineNum.length / 2)];
+  }
+  let low = combineNum[Math.floor(combineNum.length / 2) - 1];
+  let high = combineNum[Math.ceil(combineNum.length / 2)];
+  console.log(low, high);
+  return (low + high) / 2;
+};
