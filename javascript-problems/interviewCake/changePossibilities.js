@@ -1,10 +1,23 @@
 function changePossibilities(amountLeft, denominations) {
   // Calculate the number of ways to make change
-  if (amountLeft === 0) return 1;
+  // console.log(amountLeft);
+  // if (amountLeft === 0) return 1;
 
-  let value = 0;
+  const waysOfDoingNcents = new Array(amountLeft + 1).fill(0);
+  console.log(waysOfDoingNcents);
+  waysOfDoingNcents[0] = 1;
 
-  while (value <= amountLeft) {}
+  denominations.forEach((coin) => {
+    // console.log(coin);
+    for (let higherAmount = coin; higherAmount <= amountLeft; higherAmount++) {
+      const higherAmountRemainder = higherAmount - coin;
+      waysOfDoingNcents[higherAmount] +=
+        waysOfDoingNcents[higherAmountRemainder];
+      console.log(waysOfDoingNcents);
+    }
+  });
 
-  return 0;
+  return waysOfDoingNcents[amountLeft];
 }
+
+console.log(changePossibilities(5, [1, 3]));
