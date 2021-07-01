@@ -21,6 +21,7 @@
 // console.log(highestProductOf3([2, 6, 1, 9, 8]));
 // //  want 6 and 8 = 14
 
+// O(n) time and O(1)O(1) additional space.
 function highestProductOf3(arrayOfInts) {
   // Calculate the highest product of three numbers
   if (arrayOfInts.length < 3) {
@@ -37,14 +38,14 @@ function highestProductOf3(arrayOfInts) {
   for (let i = 2; i < arrayOfInts.length; i++) {
     let current = arrayOfInts[i];
     // [2, 6, 1, 9, 8]
-    
+
     productOf3 = Math.max(
       productOf3,
       current * highestProductOf2,
       current * lowestProductOf2
-    ); 
+    );
     console.log(productOf3);
-    
+
     highestProductOf2 = Math.max(
       highestProductOf2,
       current * highest,
