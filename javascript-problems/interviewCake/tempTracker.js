@@ -5,11 +5,20 @@ class TempTracker {
     this.numberOfReadings = 0;
     this.totalSum = 0;
     this.mean = null;
+
     this.maxTemp = null;
     this.minTemp = null;
+
+    this.occurences = new Array(111).fill(0);
     this.maxOccurrences = 0;
   }
   insert(temperature) {
+    this.occurences[temperature]++;
+    if (this.occurences[temperature] > this.maxOccurrences) {
+      this.mode = temperature;
+      this.maxOccurrences = this.occurences[temperature];
+    }
+
     this.numberOfReadings++;
     this.totalSum += temperature;
     this.mean = this.totalSum / this.numberOfReadings;
@@ -17,7 +26,7 @@ class TempTracker {
     if (this.maxTemp === null || temperature > this.maxTemp) {
       this.maxTemp = temperature;
     }
-    if (this.minTemp === null || temprature < this.minTemp) {
+    if (this.minTemp === null || temperature < this.minTemp) {
       this.minTemp = temperature;
     }
   }
@@ -35,7 +44,7 @@ class TempTracker {
   }
 
   getMode() {
-    return 0;
+    return this.mode;
   }
 }
 
