@@ -6,8 +6,10 @@ function phone(s) {
       removeChar += s[i];
     }
   }
+  console.log(removeChar);
   let length = Math.min(removeChar.length, 10);
-  for (let i = 0; i < length; i++) {
+  console.log(length);
+  for (let i = 0; i < 10; i++) {
     if (i === 0) {
       newPhone += "(" + removeChar[i];
     } else if (i === 3) {
@@ -20,3 +22,5 @@ function phone(s) {
   }
   return newPhone;
 }
+
+console.log(phone("415-902-6493"));
