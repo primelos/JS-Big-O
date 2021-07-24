@@ -16,6 +16,57 @@
 // 3
 // Too chaotic
 
+input;
+// 8
+// 5 1 2 3 7 8 6 4
+// 8
+// 1 2 5 3 7 8 6 4
+output;
+// Too chaotic
+// 7
+
+// O(nlogn)
 function minimumBribes(q) {
   // Write your code here
+  const toChaotic = "Too chaotic";
+  let count = 0;
+  for (let currentPos = 0; currentPos < q.length; currentPos++) {
+    const originalPositions = q[currentPos] - 1;
+
+    const diff = originalPositions - currentPos;
+    if (diff > 2) {
+      return console.log(toChaotic);
+    }
+    if (diff <= 0) {
+      for (let i = Math.max(0, originalPositions - 1); i < currentPos; i++) {
+        const startPosOfForwardPerson = q[i] - 1;
+        if (startPosOfForwardPerson > originalPositions) {
+          count++;
+        }
+      }
+    }
+  }
+  console.log(count);
+}
+
+// O(n)
+function minimumBribes(q) {
+  let swaps = 0;
+  let min = q.length;
+  for (var i = q.length - 1; i >= 0; i--) {
+    if (q[i] - i > 3) {
+      return `Too chaotic`;
+    }
+    if (q[i] > i + 1) {
+      swaps += q[i] - (i + 1);
+    } else {
+      if (min > q[i]) {
+        min = q[i];
+      } else if (q[i] != min) {
+        swaps++;
+      }
+    }
+  }
+
+  return swaps;
 }
