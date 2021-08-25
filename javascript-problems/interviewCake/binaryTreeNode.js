@@ -27,7 +27,7 @@ function isBalanced(treeRoot) {
   console.log("length", nodes.length);
   while (nodes.length) {
     console.log("whileloop");
-    console.log("nodes", nodes);
+    console.log("NodesArray", nodes);
 
     const nodePair = nodes.pop();
     console.log("NodePair", nodePair);
@@ -75,8 +75,8 @@ myTest.left.insertRight(5);
 myTest.left.right.insertRight(4);
 
 myTest.insertRight(19);
-myTest.right.insertLeft(2);
-myTest.right.insertRight(7);
+// myTest.right.insertLeft(2);
+// myTest.right.insertRight(7);
 
 // console.log(myTest);
 
