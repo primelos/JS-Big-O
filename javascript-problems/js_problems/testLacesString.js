@@ -11,6 +11,7 @@ const findLaceStrings = (inventory) => {
 const helper = (line, shoes) => {
   for (let j = 0; j < shoes.length; j++) {
     let wordLine = {};
+    console.log(shoes[j].name, shoes[j].name.indexOf("lace"));
     if (shoes[j].name.includes("lace")) {
       let check = shoes[j].name.split(" ");
       wordLine["nameWords"] = check;
@@ -45,7 +46,7 @@ var currentInventory = [
 ];
 
 function assertString(actual, expected, testName) {
-  if (actual === expected) {
+  if (JSON.stringify(actual) === JSON.stringify(expected)) {
     console.log("pass");
   } else {
     console.log(`Failed, ${testName}`);
