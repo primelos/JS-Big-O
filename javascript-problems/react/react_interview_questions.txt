@@ -76,3 +76,10 @@
     time it is invoked.
 
 12. What are props?
+
+13.What are best practices using hooks?
+    Follow the hook rules. Only call hooks at the Top Level in order to help preseve
+    the state of hooks.
+    Only call hooks from react functions, like react function componenets and custom hooks.
+    Do not call from regular javascript functions.
+    Use a Linter
