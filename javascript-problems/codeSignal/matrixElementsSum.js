@@ -19,9 +19,14 @@
 function matrixElementsSum(matrix) {
   let num = 0;
 
-  for (let i = 0; i < matrix.length; i++) {
-    for (let j = 0; j < matrix[0].length; j++) {
-      console.log(matrix[i][j]);
+  for (let i = 0; i < matrix[0].length; i++) {
+    for (let j = 0; j < matrix.length; j++) {
+      console.log(matrix[j][i]);
+      if (matrix[j][i] === 0) {
+        break;
+      }
+      num += matrix[j][i];
     }
   }
+  return num;
 }
