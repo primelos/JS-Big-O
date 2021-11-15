@@ -21,6 +21,7 @@
 
 // Sorted array a with all the trees untouched.
 
+// My code
 function sortByHeight(a) {
   console.log("hi");
   let treeArr = [];
@@ -30,12 +31,32 @@ function sortByHeight(a) {
     }
   }
   let newA = a.filter((el) => el !== -1).sort((a, b) => a - b);
-
   for (let i = 0; i < treeArr.length; i++) {
     newA.splice(treeArr[i], 0, -1);
   }
   return newA;
 }
 
+// Other code
+// function sortByHeight(a) {
+//   let filtered = a.filter((val) => val !== -1).sort((a, b) => a - b);
+//   return a.map((val) => (val === -1 ? -1 : filtered.shift()));
+// }
 console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));
 // Expected Output:[-1, 150, 160, 170, -1, -1, 180, 190]
+
+function func(a) {
+  if (a <= 0) {
+    return 1;
+  }
+  if (a >= 14) {
+    return 0;
+  }
+  if (a % 2 == 0) {
+    return a;
+  } else {
+    return func(a - 1) + func(a - 2);
+  }
+}
+
+console.log(func(7));
