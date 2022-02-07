@@ -48,4 +48,9 @@
 
 // true if you and your friend are equally strong, false otherwise.
 
-function solution(yourLeft, yourRight, friendsLeft, friendsRight) {}
+function solution(yourLeft, yourRight, friendsLeft, friendsRight) {
+  return (yourLeft === friendsLeft && yourRight === friendsRight) ||
+    (yourLeft === friendsRight && yourRight === friendsLeft)
+    ? true
+    : false;
+}
