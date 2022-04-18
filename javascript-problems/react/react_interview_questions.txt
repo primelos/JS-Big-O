@@ -3,7 +3,11 @@
     It follows the component based approach which helps build reusable UI components.
     It is used for developing complex and interactive web and mobile UI.
 
-2.What does react solve?
+2.What does react solve? 
+    The main problem solved by react is the development of large applications
+    that have temporal data changes. The data in such applications is not
+    static so it changes over time. We can look at React as the V layer 
+    in model-view-controller (MVC) pattern of software development.
 
 3.List major features of React?
     It uses the virtual DOM instead of the real DOM
@@ -76,6 +80,12 @@
     time it is invoked.
 
 12. What are props?
+    Props are arguments passed into React components. Props are passed
+        to components via HTML attributes. props stands for properties. the
+        important part here is that data with props are being passed in a
+        uni-directional flow. (one way from parent to child). Furthermore,
+        props data is read-only, which means that data coming from the 
+        parent should not be changed by child components.
 
 13.What are best practices using hooks?
     Follow the hook rules. Only call hooks at the Top Level in order to help preseve
